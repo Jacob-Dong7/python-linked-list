@@ -53,6 +53,29 @@ def double():
             value = input("Select value: ")
             doublelist.add_back(value)
             print("--------------------------")   
+        elif user_input == "3":
+            print("--------------------------")
+            print("INSERT AT")
+            print("--------------------------")
+            value = input("Select value: ")
+            print("Length:", doublelist.get_length())
+            index = input("Select index: ")
+            doublelist.add_at(value, index)
+            print("--------------------------")
+        elif user_input == "4":
+            print("--------------------------")
+            print("DELETE AT")
+            print("--------------------------")
+            index = input("Select index: ")
+            doublelist.delete_by_index(index)
+            print("--------------------------")     
+        elif user_input == "5":
+            print("--------------------------")
+            print("DELETE BY VALUE")
+            print("--------------------------")
+            value = input("Select value: ")
+            doublelist.delete_by_value(value)
+            print("--------------------------")              
         elif user_input == "6":
             doublelist.print()
 
