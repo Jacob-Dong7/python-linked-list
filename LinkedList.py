@@ -47,6 +47,7 @@ class linked_list:
             return
         
         if new_index > self.length or new_index <= 0:
+            print("--------------------------")
             print("Index out of bound")
             return
         else:
@@ -64,7 +65,66 @@ class linked_list:
                     previous = current
                     current = current.get_next()
                     i += 1  
-                    continue            
+                    continue       
+
+    def delete_by_value(self, value):
+        value_change = int(value)
+
+        current = self.head
+        previous = current
+        i = 1
+
+        while current is not None:
+    
+            if int(current.get_value()) == value_change:
+                if i == 1:
+                    self.delete_head()
+                elif current.get_next() == None:
+                    previous.set_next(None)
+                    self.length -= 1
+                else:
+                    previous.set_next(current.get_next())
+                    self.length -= 1
+                return
+            else:
+                previous = current
+                current = current.get_next()
+                i += 1
+
+
+    """A B C"""
+    def delete_by_index(self, value):
+        index = int(value)
+
+        if index > self.length or index <= 0:
+            print("--------------------------")
+            print("Index out of bound")
+        if index == 1:
+            self.delete_head()
+            return
+    
+        current = self.head
+        previous = current
+        i = 1
+        while True:
+            if i == index:
+                previous.set_next(current.get_next())
+                self.length -= 1
+                return
+            else:
+                previous = current
+                current = current.get_next()
+                i += 1
+    
+    def delete_head(self):
+        current = self.head
+        next = current.get_next()
+        self.head = next
+        self.length -= 1
+
+
+
+        
         
     
     def set_new(self, new_node):
@@ -76,7 +136,7 @@ class linked_list:
         if self.length <= 0:
             print("Empty")
             return
-        while True:
+        while current is not None:
             if current.get_next() != None:
                 print(current.get_value(),end=" -> ")
                 current = current.get_next()
