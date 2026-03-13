@@ -35,8 +35,35 @@ class DoubleLinkedList:
                     return
                 else:
                     current = current.get_next()
-
-
+            
+    def print(self):
+        if self.head is None:
+            print("List is empty")
+            return
+        else:
+            current = self.head
+            while current is not None:
+                if current.get_next() is None:
+                    print(current.get_value())
+                    return
+                else:
+                    print(current.get_value(), end=" -> ")
+                    current = current.get_next()
+                
+    def print_reverse(self):
+        if self.tail is None or self.head is None:
+            print("List is empty")
+            return
+        else:
+            current = self.tail
+            while current is not None:
+                if current.get_prev() is None:
+                    print(current.get_value())
+                    return
+                else:
+                    print(current.get_value(),end=" -> ")
+                    current = current.get_prev()
+                    
     def add_length(self):
         self.length += 1
 
@@ -54,6 +81,12 @@ class Node:
     
     def get_next(self):
         return self.next
+    
+    def get_prev(self):
+        return self.prev
+    
+    def get_value(self):
+        return self.value
     
 
     
