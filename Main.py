@@ -15,7 +15,7 @@ def main():
             double()
         elif user_input == "-1":
             print("Exiting...")
-            exit
+            exit()
         else:
             print("Select from available option")
             continue
@@ -35,6 +35,10 @@ def double():
         print("[5] Delete by value")
         print("[6] Print")
         print("[7] Print Reverse")
+        print("[8] Search by value")
+        print("[9] Search by index")
+        print("[10] Find minimum value")
+        print("[11] Find maximum value")
         print("--------------------------")
 
         user_input = input("Select Choice: ")
@@ -75,12 +79,46 @@ def double():
             print("--------------------------")
             value = input("Select value: ")
             doublelist.delete_by_value(value)
-            print("--------------------------")              
+            print("--------------------------")     
+        elif user_input == "8":
+            print("--------------------------")
+            print("SEARCH BY VALUE")
+            print("--------------------------")
+            value = input("Select value: ")
+            doublelist.search_value(value)
+            print("--------------------------")           
+        elif user_input == "9":
+            print("--------------------------")
+            print("SEARCH BY INDEX")
+            print("--------------------------")
+            index = input("Select index: ")
+            doublelist.search_index(index)
+            print("--------------------------")  
+            
+        elif user_input == "10":
+            print("--------------------------")
+            print("MINIMUM")
+            print("--------------------------")
+            doublelist.min()
+            print("--------------------------")
+        elif user_input == "11":
+            print("--------------------------")
+            print("MAXIMUM")
+            print("--------------------------")
+            doublelist.max()
+            print("--------------------------")
         elif user_input == "6":
+            print("--------------------------")
+            print("PRINT")
+            print("--------------------------")
             doublelist.print()
-
+            print("--------------------------")
         elif user_input == "7":
+            print("--------------------------")
+            print("REVERSE PRINT")
+            print("--------------------------")
             doublelist.print_reverse()
+            print("--------------------------")
         elif user_input == "-1":
             return         
 

@@ -1,3 +1,4 @@
+import math
 class DoubleLinkedList:
     def __init__(self):
         self.head = None
@@ -119,6 +120,91 @@ class DoubleLinkedList:
             self.head = None
             self.tail = None
 
+    def search_value(self, value):
+        if self.length <= 0 or self.head == None or self.tail == None:
+            print("List is empty")
+            return
+        current = self.head
+        index = 1
+        while current is not None:
+            if index > self.length:
+                print("Value cannot be found")
+                return
+            elif int(current.get_value()) == int(value):
+                print(value,end=" ")
+                print("located at index",end= " ")
+                print(index)
+                return
+            else:
+                current = current.get_next()
+                index += 1
+                
+        return
+    def search_index(self, index):
+        index = int(index)
+        if self.length <= 0 or self.head == None or self.tail == None:
+            print("List is empty")
+            return
+        
+        current = self.head
+        i = 1
+
+        while current is not None:
+            if index == i:
+                print("Value at index",end=" ")
+                print(index,end=" is ")
+                print(current.get_value())
+                return
+            else:
+                i += 1
+                current = current.get_next()
+    
+        return
+    def min(self):
+        if self.length <= 0 or self.head == None or self.tail == None:
+            print("List is empty")
+            return
+        
+        current = self.head
+        
+        min = int(current.get_value())
+        i = 1
+        found_at = 1
+        while i <= self.length and current is not None:
+            if int(current.get_value()) < min:
+                min = int(current.get_value())
+                found_at = i
+            current = current.get_next()
+            i += 1
+
+        print("Min Value = ",end="")
+        print(min)
+        print("Found at index = ",end="")
+        print(found_at)
+        return
+    def max(self):
+        if self.length <= 0 or self.head == None or self.tail == None:
+            print("List is empty")
+            return
+        
+        current = self.head
+        
+        max = int(current.get_value())
+        i = 1
+        found_at = 1
+
+        while i <= self.length and current is not None:
+            if int(current.get_value()) > max:
+                max = int(current.get_value())
+                found_at = i
+            current = current.get_next()
+            i += 1
+
+        print("Max Value = ",end="")
+        print(max)
+        print("Found at index = ",end="")
+        print(found_at)
+        return
         
     def delete_by_value(self, value):
 
@@ -192,7 +278,7 @@ class DoubleLinkedList:
                 i += 1
                 current = current.get_next()
         
-        
+
 
 
         
