@@ -1,69 +1,63 @@
-<h1 align="center">Linked List Showcase (Python)</h1>
+<h1 align="center">Python Sorting</h1>
 
 <p align="center">
-Python implementation of a <b>Singly Linked List</b> and a <b>Doubly Linked List</b>.
+Text-based Python program showcasing <b>Bubble Sort</b>, <b>Selection Sort</b>, and <b>Merge Sort</b>.
 </p>
 
 ---
 
 <h2 align="center">📌 Overview</h2>
 
-This repository contains two linked list implementations:
+This project contains three sorting algorithm implementations with a simple text-based interface.
 
-| Structure | Description |
+| Algorithm | Description |
 |---|---|
-| `LinkedList` | Singly linked list implementation |
-| `DoubleLinkedList` | Doubly linked list implementation |
+| `Bubble Sort` | Repeatedly swaps adjacent elements until sorted |
+| `Selection Sort` | Repeatedly selects the smallest remaining element |
+| `Merge Sort` | Recursively splits and merges arrays in sorted order |
 
-Both lists support common operations such as insertion, deletion, traversal, searching, and list length tracking.
+Each algorithm supports two input options:
+- Create your own array
+- Use a test array file with varying sizes
+
+The program also includes a timer system to show how many seconds each algorithm takes to run.
 
 ---
 
-<h2 align="center">⚙️ Singly Linked List Functions</h2>
+<h2 align="center">⚙️ Features</h2>
 
-| Function | Description |
+| Feature | Description |
 |---|---|
-| `add_front(value)` | Inserts a node at the beginning of the list |
-| `add_tail(value)` | Inserts a node at the end of the list |
-| `add_at(value, index)` | Inserts a node at a specified index |
-| `delete_by_value(value)` | Removes the first node containing a value |
-| `delete_by_index(index)` | Removes the node at the specified index |
-| `delete_head()` | Removes the first node in the list |
-| `print()` | Traverses and prints the list |
-| `get_length()` | Returns the number of nodes in the list |
+| `Bubble Sort` | Sorts the array using bubble sort |
+| `Selection Sort` | Sorts the array using selection sort |
+| `Merge Sort` | Sorts the array using merge sort |
+| `Custom Array Input` | Lets the user enter their own array |
+| `Test File Input` | Loads arrays from test files of different sizes |
+| `Text Interface` | Menu-based terminal interface |
+| `Timer System` | Displays execution time in seconds |
 
 ---
 
-<h2 align="center">⚙️ Doubly Linked List Functions</h2>
+<h2 align="center">🧠 Program Structure</h2>
 
-| Function | Description |
+| Component | Purpose |
 |---|---|
-| `add_front(value)` | Inserts a node at the beginning of the list |
-| `add_back(value)` | Inserts a node at the end of the list |
-| `add_at(value, index)` | Inserts a node at a specified index |
-| `delete_first()` | Removes the first node |
-| `delete_by_value(value)` | Removes the first node matching a value |
-| `delete_by_index(index)` | Removes the node at the specified index |
-| `search_value(value)` | Searches for a value and reports its index |
-| `search_index(index)` | Retrieves the value stored at a given index |
-| `print()` | Traverses the list from head to tail |
-| `print_reverse()` | Traverses the list from tail to head |
-| `min()` | Finds the smallest value in the list |
-| `max()` | Finds the largest value in the list |
-| `get_length()` | Returns the current number of nodes |
+| `Main.py` | Runs the program interface |
+| `Bubble Sort` | Bubble sort implementation |
+| `Selection Sort` | Selection sort implementation |
+| `Merge Sort` | Merge sort implementation |
+| `Testing Files` | Stores test arrays for input |
 
 ---
 
-<h2 align="center">🧠 Core Classes</h2>
+<h2 align="center">▶️ Run the Program</h2>
 
-| Class | Purpose |
-|---|---|
-| `Node` | Stores value and reference(s) to adjacent node(s) |
-| `LinkedList` | Manages singly linked list operations |
-| `DoubleLinkedList` | Manages doubly linked list operations |
+<p align="center">
+<code>python3 src/Main.py</code>
+</p>
 
 ---
 
 <p align="center">
-Python • Data Structures • Educational Project
+Python • Sorting Algorithms • Educational Project
 </p>
